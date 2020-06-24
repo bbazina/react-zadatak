@@ -5,6 +5,7 @@ function Colors() {
     
     const [color, setColor] = useState('');
     const [list, setList] = useState([]);
+    
 
  
 const onClick = async () => {
@@ -23,7 +24,12 @@ const onClick = async () => {
 
 
   return (
+   <>   
   <div onClick={onClick} style={{backgroundColor:'#000000', height: '100px', width: '300px', color}}>fewewfewf</div>
+  <ul>
+  {list.map((color_hex, i) => <li key={i} style={{color: color_hex}} >{color_hex}</li>)}
+</ul> 
+</>
   );
 }
 
